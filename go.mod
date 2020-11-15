@@ -1,4 +1,4 @@
-module github.com/estebgonza/belb-retrievor
+module github.com/belbet/retrievor
 
 go 1.13
 
