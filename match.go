@@ -6,6 +6,7 @@ package retrievor
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 	"strconv"
 	"strings"
@@ -108,13 +109,13 @@ func (r *MatchesResult) ParsePage(date string) error {
 		return err
 	}
 	r.currentDate = d
-	fmt.Print(fmt.Sprintf("> %s : ", url))
+	log.Println(fmt.Sprintf("%s : Parsing...", url))
 	doc, err := goquery.NewDocument(url)
 	if err != nil {
 		return err
 	}
 	r.parseMatches(doc)
-	fmt.Println("OK.")
+	log.Println(fmt.Sprintf("%s : Parsing done !", url))
 
 	return nil
 }
