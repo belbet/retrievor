@@ -6,6 +6,7 @@ package retrievor
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 	"strings"
 	"time"
@@ -53,13 +54,13 @@ func (r *ClubParse) ExportAsCSV() error {
 // ParseAll Main method to parse all clubs of current date
 func (r *ClubParse) ParseAll() error {
 	var url = getURL(r.CurrentPage)
-	fmt.Print(fmt.Sprintf("> %s :", url))
+	log.Println(fmt.Sprintf("%s : Parsing...", url))
 	doc, err := goquery.NewDocument(url)
 	if err != nil {
 		return err
 	}
 	r.parseClub(doc)
-	fmt.Println(" OK!")
+	log.Println(fmt.Sprintf("%s : Parsing done !", url))
 
 	return nil
 }

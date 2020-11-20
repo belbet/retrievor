@@ -1,4 +1,5 @@
 # belb-retrievor
+[![Actions Status](https://github.com/belbet/retrievor/workflows/Go/badge.svg)](https://github.com/belbet/retrievor/actions)
 
 # Examples
 
@@ -7,25 +8,17 @@
 You can parse results of all match from 2020-01 with
 
 ```
-scope := "monde"
-date := "2020-01"
-var r = ResultParse{CurrentDate: date, Scope: scope}
-r.ParseAll()
-// Iterate trough all pages
-for ; r.NextDate != ""; r.ParseAll() {
-    if r.NextDate <= r.CurrentDate {
-        break
-    }
-    // Switch page
-    r.CurrentDate = r.NextDate
-    r.NextDate = ""
-}
+startDate := "2020-01-01"
+endDate := "2020-01-31"
+r := retrievor.MatchesResult{}
+
+r.ParseAllWithStringRange(startDate, endDate)
 r.ExportAsCSV()
 ```
 
 ## Clubs
 
-Yu can parse and export all clubs with
+You can parse and export all clubs with
 
 ```
 var c = ClubParse{}
