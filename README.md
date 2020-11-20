@@ -1,5 +1,6 @@
 # belb-retrievor
-[![Actions Status](https://github.com/belbet/retrievor/workflows/go/badge.svg)](https://github.com/belbet/retrievor/actions)
+![Actions Status](https://github.com/belbet/retrievor/workflows/Go/badge.svg)
+
 # Examples
 
 ## Matches
@@ -17,7 +18,7 @@ r.ExportAsCSV()
 
 ## Clubs
 
-Yu can parse and export all clubs with
+You can parse and export all clubs with
 
 ```
 var c = ClubParse{}
