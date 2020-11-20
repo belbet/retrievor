@@ -1,5 +1,5 @@
 # belb-retrievor
-![Actions Status](https://github.com/belbet/retrievor/workflows/Go/badge.svg)
+[![Actions Status](https://github.com/belbet/retrievor/workflows/Go/badge.svg)](https://github.com/belbet/retrievor/actions)
 
 # Examples
 
