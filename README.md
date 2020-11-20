@@ -8,8 +8,8 @@
 You can parse results of all match from 2020-01 with
 
 ```
-startDate := c.String("start-date")
-endDate := c.String("end-date")
+startDate := "2020-01-01"
+endDate := "2020-01-31"
 r := retrievor.MatchesResult{}
 
 r.ParseAllWithStringRange(startDate, endDate)
