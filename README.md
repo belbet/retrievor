@@ -1,6 +1,8 @@
 # belb-retrievor
 [![Actions Status](https://github.com/belbet/retrievor/workflows/Go/badge.svg)](https://github.com/belbet/retrievor/actions)
 
+# Repository archived: Retrievor was merged with Bettificator [Here](https://github.com/belbet/betrievor)
+
 # Examples
 
 ## Matches
