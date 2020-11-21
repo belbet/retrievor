@@ -26,8 +26,8 @@ type ClubParse struct {
 
 // Club Represent one club
 type Club struct {
-	ID   string `json:"id"`
-	Name string `json:"name"`
+	ID   string `json:"club_id"`
+	Name string `json:"club_name"`
 }
 
 func getURL(page string) string {
@@ -36,7 +36,7 @@ func getURL(page string) string {
 
 // ExportAsCSV Used to export content of ClubParse in a csv file
 func (r *ClubParse) ExportAsCSV() error {
-	f, err := os.Create(fmt.Sprintf("clubs-%d.csv", time.Now().Second()))
+	f, err := os.Create(fmt.Sprintf("clubs-%d.csv", time.Now().Unix()))
 	if err != nil {
 		return err
 	}
